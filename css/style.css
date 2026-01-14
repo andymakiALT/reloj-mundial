@@ -1,79 +1,57 @@
-:root {
-  --titlebar-bg: #e0e0e0;
-  --window-bg: #ffffff;
-  --window-text: #000000;
-  --border: #aaa;
-  --shadow: 0 8px 24px rgba(0,0,0,0.25);
-  --radius: 8px;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
 body {
   margin: 0;
-  width: 100vw;
-  height: 100vh;
-  background: url("../assets/wallpaper.jpg") center/cover no-repeat fixed;
-  overflow: hidden;
-  color: var(--window-text);
-}
-
-#desktop {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-/* WINDOWS */
-.window {
-  position: absolute;
-  width: 300px;
-  background: var(--window-bg);
-  color: var(--window-text);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-}
-
-.titlebar {
-  height: 36px;
-  background: var(--titlebar-bg);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-  cursor: grab;
-}
-
-.title-left {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.controls {
-  display: flex;
-  gap: 6px;
-}
-
-.control {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.control.close { background: #ff5c5c; }
-.control.minimize { background: #ffbd4a; }
-
-.content {
-  padding: 12px;
-  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  background: #ffe4e1; /* rosa clarito */
+  color: #333;
   text-align: center;
-  line-height: 1.4;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 2em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  padding: 20px;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.3em;
+}
+
+.time {
+  font-family: monospace;
+  font-size: 1.4em;
+  margin: 10px 0;
+}
+
+.ascii {
+  font-family: monospace;
+  font-size: 14px;
+  margin: 10px 0;
+  color: #ff69b4;
+}
+
+p {
+  margin: 6px 0 0 0;
+  font-size: 14px;
 }
